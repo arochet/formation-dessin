@@ -1,0 +1,7 @@
+{
+  "name": "formation-dessin",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

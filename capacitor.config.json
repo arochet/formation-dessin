@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "formation-dessin",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}
