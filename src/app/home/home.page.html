@@ -1,20 +1,20 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+  <ion-toolbar id="top-toolbar">
+    <ion-title>Application Dessin</ion-title>
+    <ion-button slot="end" (click)="goToPDF()">PDF</ion-button>
+    <ion-button slot="end" (click)="save()">Save</ion-button>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <canvas #myCanvas (touchstart)="handleStart($event)" (touchmove)="handleMove($event)"></canvas>
+  <ion-img [src]="finalImage"></ion-img>
 </ion-content>
+
+<ion-footer>
+  <ion-toolbar id="bottom-toolbar">
+    <ion-button (click)="setColor('#ff0000')"><ion-icon color="custom-red" name="brush-outline"></ion-icon></ion-button>
+    <ion-button (click)="setColor('#00ff00')"><ion-icon color="custom-green" name="brush-outline"></ion-icon></ion-button>
+    <ion-button (click)="setColor('#0000ff')"><ion-icon color="custom-blue" name="brush-outline"></ion-icon></ion-button>
+  </ion-toolbar>
+</ion-footer>

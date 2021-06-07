@@ -1,0 +1,12 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>auth</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <h2>Authentification</h2>
+  <ion-button class="btn btn-success" *ngIf="!authStatus" (click)="onSignIn()">Se connecter</ion-button>
+  <ion-button class="btn btn-danger" *ngIf="authStatus" (click)="onSignOut()">Se déconnecter</ion-button>
+  
+</ion-content>
